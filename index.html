@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Jena ♡</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="stars"></div>
+  <div class="planet planet-one">♡</div>
+  <div class="planet planet-two"></div>
+
+  <main>
+    <section id="opening" class="screen active">
+      <div class="astronaut">🧸</div>
+      <p class="eyebrow">A little universe</p>
+      <h1>For someone<br><span>very special...</span></h1>
+      <p class="intro">Hari ini bukan hari biasa.<br>Hari ini adalah hari kamu, Jenduyy
+      <button class="btn" data-next="home">Open your surprise ✧</button>
+    </section>
+
+    <section id="home" class="screen">
+      <p class="eyebrow">22 September 2026</p>
+      <h1>Happy Birthday,<br><span>Jena sayang! ♡</span></h1>
+      <div class="cake" id="cake" title="Klik kuenya">🎂</div>
+      <p id="cakeHint">Klik kue untuk menyalakan lilin ✨</p>
+      <button class="btn" data-next="memories">Let's explore ♡</button>
+    </section>
+
+    <section id="memories" class="screen">
+      <p class="eyebrow">Our little memories</p>
+      <h2>Moments with you 📸</h2>
+      <!-- <p class="muted">Ganti foto contoh di folder <b>images</b> dengan foto kalian.</p> -->
+      <div class="gallery">
+        <figure><img src="images/1.jpg" alt="Memory 1"><figcaption>Our favorite moment ♡</figcaption></figure>
+        <figure><img src="images/2.jpg" alt="Memory 2"><figcaption>Small moment, big meaning</figcaption></figure>
+        <figure><img src="images/3.jpg" alt="Memory 3"><figcaption>Still my favorite person</figcaption></figure>
+        <figure><img src="images/4.webp" alt="Memory 4"><figcaption>Our little universe</figcaption></figure>
+      </div>
+      <button class="btn" data-next="letter">Read my letter 💌</button>
+    </section>
+
+    <section id="letter" class="screen">
+      <p class="eyebrow">A letter for you</p>
+      <div class="letter">
+        <h2>Dear Jenuy ♡</h2>
+        <p id="typedLetter"></p>
+        <button class="btn small" id="revealLetter">Reveal more</button>
+      </div>
+      <button class="btn" data-next="game">Next surprise ✧</button>
+    </section>
+
+    <section id="game" class="screen">
+      <p class="eyebrow">A tiny challenge</p>
+      <h2>Mini game 🌷</h2>
+      <p>Mana jawaban yang paling cocok?</p>
+      <div class="choices">
+        <button class="choice">Kamu adalah rumah</button>
+        <button class="choice">Kamu cuma kebetulan</button>
+        <button class="choice">Aku lupa kamu</button>
+      </div>
+      <p id="gameResult"></p>
+      <button class="btn" data-next="planet">Continue ♡</button>
+    </section>
+
+    <section id="planet" class="screen">
+      <p class="eyebrow">Our universe</p>
+      <h2>Every planet has a memory 🪐</h2>
+      <div class="orbit">
+        <div class="heart-planet">♡</div>
+        <button class="memory-planet p1" data-memory="Di planet ini, aku menyimpan semua tawa kamu.">♡</button>
+        <button class="memory-planet p2" data-memory="Di planet ini, ada semua momen kecil yang selalu aku ingat.">♡</button>
+        <button class="memory-planet p3" data-memory="Di planet ini, harapanku adalah melihat kamu bahagia setiap hari.">♡</button>
+      </div>
+      <p id="planetMessage" class="planet-message">Klik planet kecil untuk membuka pesan ✨</p>
+      <button class="btn" data-next="final">One last thing ♡</button>
+    </section>
+
+    <section id="final" class="screen">
+      <div class="final-heart">♡</div>
+      <p class="eyebrow">From my heart to yours</p>
+      <h1>Happy Birthday,<br><span>Jenaa ♡</span></h1>
+      <p class="intro">Semoga hari-harimu selalu dipenuhi hal baik, tawa, cinta, dan mimpi yang perlahan menjadi nyata.</p>
+      <p class="intro">Terima kasih sudah menjadi bagian paling indah dari ceritaku. I love you ♡</p>
+      <button class="btn" id="restart">Replay our universe ↻</button>
+    </section>
+  </main>
+
+  <audio id="musicPlayer" loop preload="auto">
+    <source src="audio/until-i-found-you.mp3" type="audio/mpeg">
+  </audio>
+  <button id="musicToggle" class="music-toggle" aria-label="Putar atau jeda musik">♫</button>
+
+  <nav class="nav">
+    <button data-next="home">Home</button>
+    <button data-next="memories">Gallery</button>
+    <button data-next="letter">Letter</button>
+    <button data-next="planet">Planet</button>
+  </nav>
+  <script src="script.js"></script>
+</body>
+</html>
